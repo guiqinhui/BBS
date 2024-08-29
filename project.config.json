@@ -1,7 +1,8 @@
 {
   "description": "项目配置文件",
   "packOptions": {
-    "ignore": []
+    "ignore": [],
+    "include": []
   },
   "setting": {
     "urlCheck": false,
@@ -36,69 +37,49 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.12.1",
-  "appid": "wx570ba66baa547943",
+  "libVersion": "3.5.5",
+  "appid": "wxf901d71ff26f7859",
   "projectname": "zafuBBS",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
-          "id": -1,
           "name": "pages/article/article",
           "pathName": "pages/article/article",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/article/article",
           "pathName": "pages/article/article",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/send/send",
           "pathName": "pages/send/send",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/me/me",
           "pathName": "pages/me/me",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/article-detail/article-detail",
           "pathName": "pages/article-detail/article-detail",
+          "query": "",
           "scene": null
         }
       ]
     }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
   }
 }

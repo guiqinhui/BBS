@@ -1,6 +1,10 @@
 <!--pages/article/article.wxml-->
 <view class="content" style="margin-top:{{navH*4+40}}rpx">
   <view class="content-input">
+    <view class="add_title">
+        <view class="add_title_size">标题</view>
+        <input bindinput="inputTitle" disabled="{{contentshow=='true'? false : true}}" class="add_title_inp" placeholder="快来写下你的愿望吧！" value="{{title}}" type="text"/>
+    </view>
 
      <!-- 文本输入框 -->
     <view>
