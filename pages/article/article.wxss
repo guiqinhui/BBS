@@ -19,7 +19,6 @@ page{
   align-items: center;
 }
 .add_title_inp{
-  /* margin-right: 24rpx; */
   width: inherit;
   height: 60rpx;
   text-align: left;
@@ -103,8 +102,6 @@ page{
    width: 40%;
    height: 40%;
  }
-
-
  .video {
   width: 60vw;
   height: 60vw;
@@ -164,7 +161,15 @@ page{
   background-color: rgb(248, 248, 248);
  }
 
-
+ .choosePosition{
+  display: flex;
+  width: 680rpx;
+  height: 64rpx;
+  margin: 18rpx auto;
+  justify-content: space-around;
+  align-content: center;
+  /* background-color: aqua; */
+}
 
 .arrow-right {
   margin-left: auto;
@@ -173,10 +178,7 @@ page{
   min-width: 48rpx;
   max-width: 48rpx;
 }
-.horizontal{
-  display: flex;
-  color: #1485EE;
-}
+
 .switch{
   display: flex;
   color: #1485EE;
@@ -196,6 +198,14 @@ page{
 }
 
 
+.hideUserName{
+  height: 64rpx;
+  margin: 18rpx auto;
+}
+.articleTag{
+  height: 64rpx;
+  margin: 18rpx auto;
+}
  /* 标签 */
  .tag-title {
   font-size: 32rpx;
@@ -227,6 +237,7 @@ page{
   display: flex;
   flex-direction: column;
   padding-top: 0rpx;
+  margin: 18rpx auto;
 }
 
 .confirm{

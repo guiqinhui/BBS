@@ -15,7 +15,7 @@
         placeholder="请输入文章内容"
         auto-height='{{true}}' 
         />
-  </view>
+    </view>
 
     <!-- 对于上传后的照片加以显示，可删除和添加 -->
   <view class="image-list" wx:if="{{imageList.length > 0}}">
@@ -77,41 +77,43 @@
     </view>
   </view>
 
-  <!-- 位置选择 -->
-  <view>
-    <view class="line"></view>
-    <view class="horizontal" bindtap="chooseLocation">
-      <view class="tag-title">
-        {{location && location.length > 0 ? location: '选择位置'}}
-      </view>
-      <image wx:if="{{location && location.length > 0}}"
-        catchtap="deleteLocation"
-        class="arrow-right"
-        src="../../assets/images/send/clear.png"
-      />
-      <image wx:if="{{ !location }}"
-        class="arrow-right" 
-        src="../../assets/images/send/arrow_right.png"
-      />
-    </view>
   </view>
+  
+  <!-- 位置选择 -->
+  <view class="choosePosition" bindtap="chooseLocation">
+    <view class="tag-title">
+      {{location && location.length > 0 ? location: '选择位置'}}
+    </view>
+    <image wx:if="{{location && location.length > 0}}"
+      catchtap="deleteLocation"
+      class="arrow-right"
+      src="../../assets/images/send/clear.png"
+    />
+    <image wx:if="{{ !location }}"
+      class="arrow-right" 
+      src="../../assets/images/send/arrow_right.png"
+    />
+  </view>
+    
 
     <!-- 是否匿名 -->
-    <view class="line"></view>
-    <view class="switch">  
-      <view class="weui-cell__bd">匿名发布</view>
-      <view class="weui-cell__ft" >
-          <label class="weui-switch-cp">
-              <checkbox-group bindchange="postStatus">
-                <checkbox class="weui-switch-cp__input" checked="{{anonymous}}" />
-                <view class="weui-switch-cp__box"></view>
-              </checkbox-group>
-          </label>
+    <view class="hideUserName">
+      <view class="switch">  
+        <view class="weui-cell__bd">匿名发布</view>
+        <view class="weui-cell__ft" >
+            <label class="weui-switch-cp">
+                <checkbox-group bindchange="postStatus">
+                  <checkbox class="weui-switch-cp__input" checked="{{anonymous}}" />
+                  <view class="weui-switch-cp__box"></view>
+                </checkbox-group>
+            </label>
+        </view>
       </view>
     </view>
+    
     <!-- 板块选择 -->
-    <view wx:if="{{topic.sorts && topic.sorts.length > 0}}" >
-      <view class="line"></view>
+    <view class="articleTag">
+      <view wx:if="{{topic.sorts && topic.sorts.length > 0}}" >
         <view class="tag-title">选择类型</view>
         <scroll-view scroll-x scroll-with-animation enable-flex="true" class="tag-list">
           <view class="tag"
@@ -122,18 +124,16 @@
             wx:key="index"
           >{{item}}</view>
         </scroll-view>
+      </view>
     </view>
-
-  </view>
-  <!-- 发布操作 -->
-  <!-- <view class="sendArticle">
-    <label class="weui-agree">
-        <checkbox class="weui-agree__checkbox-check" />
-
-        <span class="weui-agree__checkbox"></span>
-        <span class="weui-agree__text">阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator></span>
-    </label>
-    <a class="weui-btn weui-btn_primary confirm" >确认发布</a>
-    <a class="weui-btn weui-btn_default cancel">取消发布</a>
-  </view> -->
+    <!-- 发布操作 -->
+    <view class="sendArticle">
+      <label class="weui-agree">
+          <checkbox class="weui-agree__checkbox-check" />
+          <span class="weui-agree__checkbox"></span>
+          <span class="weui-agree__text">阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator></span>
+      </label>
+      <a class="weui-btn weui-btn_primary confirm" >确认发布</a>
+      <a class="weui-btn weui-btn_default cancel">取消发布</a>
+    </view>
 </view>

@@ -14,16 +14,14 @@ Page({
     },
     topic:{
       sorts:
-      ["闲置交易", "表白交友", "疑问互答", "任务兼职",
-    "相约学习", "实物招领", "趣事分享"],
-    selected:0
+      ["闲置交易", "房屋租售", "日常兼职", "失物招领","运动圈友"],
+      selected:0
     },
     content:"",
     location: "",
     imageList: [],
     video:{},
     anonymous: false
-    
   },
 
   /**
